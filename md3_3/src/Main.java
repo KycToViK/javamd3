@@ -11,9 +11,16 @@ public class Main {
         animals.add("Медведь");
         animals.add("Слон");
 
+        boolean checkW = true;
+
         Scanner input = new Scanner(System.in);
-        while (true) {
+        while (checkW) {
             System.out.println("Введите комманду от 1 до 5");
+            System.out.println("1 - Показать всех животных в зоопарке");
+            System.out.println("2 - Добавить животное в зоопарк");
+            System.out.println("3 - Удалить животное из зоопарка");
+            System.out.println("4 - Очистить список зоопарка");
+            System.out.println("5 - Проверить, есть ли конкретное животное в зоопарке");
             int command = input.nextInt();
             switch (command) {
                 case 1:
@@ -44,6 +51,7 @@ public class Main {
                     break;
 
                 default:
+                    checkW = false;
                     break;
             }
         }
